@@ -20,7 +20,7 @@ public class EmailNotificationService {
 
     public ResponseDtos sendEmail(String recipient, String body, String subject) {
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("Rewise Support <fromEmail>");
+        message.setFrom("Rewise Support <" + fromEmail + ">");
         message.setTo(recipient);
         message.setText(body);
         message.setSubject(subject);
